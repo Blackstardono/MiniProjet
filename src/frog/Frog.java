@@ -34,22 +34,25 @@ public class Frog implements IFrog {
 			 newCoord = this.position.ord;
 			 newCoord+= 1;
 			 Case newPosition = new Case(this.position.absc, newCoord);
+			 this.position = newPosition;
 		}
 		if (direction == Direction.down){
 			newCoord = this.position.ord;
 			newCoord-= 1;
 			Case newPosition = new Case(this.position.absc, newCoord);
+			this.position = newPosition;
 		}
 		if (direction == Direction.right){
 			newCoord = this.position.absc;
 			newCoord+= 1;
 			Case newPosition = new Case(newCoord,this.position.ord);
+			this.position = newPosition;
 		}
 		if (direction == Direction.left){
 			newCoord = this.position.absc;
 			newCoord-= 1;
 			Case newPosition = new Case(newCoord,this.position.ord);
+			this.position = newPosition;
 		}
-
-}
+	}
 }
