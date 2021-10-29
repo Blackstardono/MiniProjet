@@ -11,9 +11,8 @@ public class Frog implements IFrog {
 	private Case position;
 	private Direction direction;
 
-	public Frog(Case position, Direction direction){
-		this.position = position;
-		this.direction = direction;
+	public Frog(Game game){
+		this.game = game;
 	}
 
 	@Override
