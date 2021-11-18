@@ -2,8 +2,12 @@ package frog;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
+import graphicalElements.Element;
+import graphicalElements.IFroggerGraphics;
 import util.Case;
 import util.Direction;
+
+import java.awt.*;
 
 public class Frog implements IFrog {
 	
@@ -11,8 +15,12 @@ public class Frog implements IFrog {
 	private Case position;
 	private Direction direction;
 
+
 	public Frog(Game game){
+
 		this.game = game;
+		position = new Case(game.width/2,0);
+		direction = Direction.up;
 	}
 
 	@Override
@@ -27,31 +35,14 @@ public class Frog implements IFrog {
 
 	@Override
 	public void move(Direction key) {
-		this.direction = key;
-		int newCoord = 0;
-		if (direction == Direction.up){
-			 newCoord = this.position.ord;
-			 newCoord+= 1;
-			 Case newPosition = new Case(this.position.absc, newCoord);
-			 this.position = newPosition;
-		}
-		if (direction == Direction.down){
-			newCoord = this.position.ord;
-			newCoord-= 1;
-			Case newPosition = new Case(this.position.absc, newCoord);
-			this.position = newPosition;
-		}
-		if (direction == Direction.right){
-			newCoord = this.position.absc;
-			newCoord+= 1;
-			Case newPosition = new Case(newCoord,this.position.ord);
-			this.position = newPosition;
-		}
-		if (direction == Direction.left){
-			newCoord = this.position.absc;
-			newCoord-= 1;
-			Case newPosition = new Case(newCoord,this.position.ord);
-			this.position = newPosition;
+		if(key == Direction.up && position.ord < game.height - 1) {
+			position = new Case(position.absc, position.ord+1);
+		} else if (key == Direction.down && position.ord>0){
+			position = new Case(position.absc, position.ord-1);
+		} else if (key == Direction.right && position.absc < game.width - 1){
+			position = new Case(position.absc+1, position.ord);
+		} else if (key == Direction.left && position.absc>0){
+			position = new Case(position.absc-1, position.ord);
 		}
 	}
 }

@@ -91,7 +91,7 @@ public class Game {
 	 */
 	public boolean testWin() {
 		if(environment.isWinningPosition(frog.getPosition())){
-			graphic.endGameScreen("You win");
+			graphic.endGameScreen("You won");
 			return true;
 		}
 		return false;
