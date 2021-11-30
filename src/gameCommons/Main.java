@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 import frog.Frog;
-import givenEnvironment.GivenEnvironment;
+import util.Environment;
 import graphicalElements.FroggerGraphic;
 import graphicalElements.IFroggerGraphics;
 

@@ -37,10 +37,10 @@ public class Environment implements IEnvironment {
     }
 
     public void update() {
-        Iterator var2 = this.roads.iterator();
+        Iterator la = this.roads.iterator();
 
-        while(var2.hasNext()) {
-            Lane lane = (Lane)var2.next();
+        while(la.hasNext()) {
+            Lane lane = (Lane)la.next();
             lane.update();
         }
 

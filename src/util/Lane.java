@@ -23,6 +23,10 @@ public class Lane {
 		this.speed = game.randomGen.nextInt(game.minSpeedInTimerLoops) + 1;
 	}
 
+	public Lane(Game game, int ord) {
+		this(game, ord, game.defaultDensity);
+	}
+
 	public void update() {
 
 		// TODO
