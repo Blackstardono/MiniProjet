@@ -2,12 +2,9 @@ package frog;
 
 import gameCommons.Game;
 import gameCommons.IFrog;
-import graphicalElements.Element;
-import graphicalElements.IFroggerGraphics;
 import util.Case;
 import util.Direction;
 
-import java.awt.*;
 
 public class Frog implements IFrog {
 	
@@ -32,6 +29,7 @@ public class Frog implements IFrog {
 	public Direction getDirection() {
 		return direction;
 	}
+
 
 	@Override
 	public void move(Direction key) {

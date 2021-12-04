@@ -69,26 +69,6 @@ public class Lane {
 		return true;
 	}
 
-	private void removeCars() {
-		ArrayList<Car> toBeRemoved = new ArrayList();
-		Iterator ca = this.cars.iterator();
-
-		Car c;
-		while(ca.hasNext()) {
-			c = (Car)ca.next();
-			if (!c.inside()) {
-				toBeRemoved.add(c);
-			}
-		}
-
-		ca = toBeRemoved.iterator();
-
-		while(ca.hasNext()) {
-			c = (Car)ca.next();
-			this.cars.remove(c);
-		}
-
-	}
 
 	private void moveCars(boolean b) {
 		Iterator ca = this.cars.iterator();
@@ -98,7 +78,7 @@ public class Lane {
 			car.move(b);
 		}
 
-		this.removeCars();
+		//this.removeCars();
 	}
 	/*
 	 * Fourni : mayAddCar(), getFirstCase() et getBeforeFirstCase() 

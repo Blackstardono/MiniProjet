@@ -6,6 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.Timer;
 
 import frog.Frog;
+import util.EnvInf;
 import util.Environment;
 import graphicalElements.FroggerGraphic;
 import graphicalElements.IFroggerGraphics;
@@ -18,7 +19,7 @@ public class Main {
 		int width = 26;
 		int height = 20;
 		int tempo = 100;
-		int minSpeedInTimerLoops = 3;
+		int minSpeedInTimerLoops = 45;
 		double defaultDensity = 0.2;
 		
 		//Cr�ation de l'interface graphique

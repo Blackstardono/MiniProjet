@@ -6,13 +6,15 @@ import java.util.Random;
 import graphicalElements.Element;
 import graphicalElements.IFroggerGraphics;
 
+import static java.lang.Double.POSITIVE_INFINITY;
+
 public class Game {
 
 	public final Random randomGen = new Random();
 
 	// Caracteristique de la partie
 	public final int width;
-	public final int height;
+	public int height;
 	public final int minSpeedInTimerLoops;
 	public final double defaultDensity;
 
@@ -42,6 +44,11 @@ public class Game {
 		this.minSpeedInTimerLoops = minSpeedInTimerLoop;
 		this.defaultDensity = defaultDensity;
 	}
+
+	//public Game(IFroggerGraphics graphic, int width, int minSpeedInTimerLoop, double defaultDensity){
+	//	super();
+	//	this(graphic,width,double Double.POSITIVE_INFINITY,minSpeedInTimerLoop,defaultDensity);
+	//}
 
 	/**
 	 * Lie l'objet frog � la partie
@@ -77,7 +84,8 @@ public class Game {
 	 */
 	public boolean testLose() {
 		if(!environment.isSafe(frog.getPosition())){
-			graphic.endGameScreen("Game Over");
+			int score = frog.getPosition().ord +1;
+			graphic.endGameScreen("You Lose, your score is : " +score);
 			return true;
 		}
 		return false;

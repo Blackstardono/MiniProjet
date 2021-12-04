@@ -3,8 +3,6 @@ package util;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import util.Lane;
-import util.Case;
 import gameCommons.Game;
 import gameCommons.IEnvironment;
 
@@ -18,7 +16,7 @@ public class Environment implements IEnvironment {
         this.roads = new ArrayList();
         this.roads.add(new Lane(game, 0, 0.0D));
 
-        for(int i = 1; i < game.height - 1; ++i) {
+        for(int i = 1; i < game.height - 1; ++i){
             this.roads.add(new Lane(game, i));
         }
 
