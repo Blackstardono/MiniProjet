@@ -3,11 +3,12 @@ package util;
 import gameCommons.Game;
 import gameCommons.IEnvironment;
 import gameCommons.IFrog;
+import util.Lane;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class EnvInf implements IEnvironment {
+public class EnvInf {
     private Game game;
     private ArrayList<Lane> roads;
     private int newCoord;

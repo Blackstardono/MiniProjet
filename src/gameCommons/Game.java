@@ -6,8 +6,6 @@ import java.util.Random;
 import graphicalElements.Element;
 import graphicalElements.IFroggerGraphics;
 
-import static java.lang.Double.POSITIVE_INFINITY;
-
 public class Game {
 
 	public final Random randomGen = new Random();
